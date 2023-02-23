@@ -37,12 +37,13 @@ const display = []
       amount={expenses[i].amount}
       date={expenses[i].date}
       location={expenses[i].location}
-    ></ExpenseItem>)
+    />)
   }
   return (
     <div>
       <h2>Let's get started!</h2>
       <div>{display}</div>
+      
     </div>
   );
 }
