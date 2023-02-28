@@ -27,23 +27,23 @@ const App = () => {
     {
       id: "e4",
       title: "New Desk (Wooden)",
-      amount: 450.0,
+      amount: 450.00,
       date: new Date(2021, 5, 12),
       location: "Wooden items",
     },
   ];
-  return React.createElement(
-    "div",
-    {},
-    React.createElement("h2", {}, "Let's get started!"),
-    React.createElement(Expenses, {items: expenses})
-  );
-  // return (
-  //   <div>
-  //     <h2>Let's get started!</h2>
-  //     <Expenses items={expenses}/>
-  //   </div>
+  // return React.createElement(
+  //   "div",
+  //   {},
+  //   React.createElement("h2", {}, "Let's get started!"),
+  //   React.createElement(Expenses, {items: expenses})
   // );
+  return (
+    <div>
+      <h2>Let's get started!</h2>
+      <Expenses items={expenses}/>
+    </div>
+  );
 }
 
 export default App;
