@@ -4,7 +4,7 @@ import Card from '../UI/Card';
 import './ExpenseItem.css';
 
 const ExpenseItem = (props) => {
-
+console.log('ExpenseItem is calling')
 // return React.createElement(
 //    Card,
 //    {className:'expense-item'},
@@ -13,8 +13,8 @@ const ExpenseItem = (props) => {
 //    React.createElement('h2',{}, props.title),
 //    React.createElement('div',{className:'expense-item__price'},props.amount),
 // )
-const [title, setTitle] = useState(props.title)
-const clickHandler = () => {
+let [title, setTitle] = useState(props.title)
+let clickHandler = () => {
   setTitle('Updated!')
   console.log(title);
 }
@@ -23,15 +23,21 @@ const removeElement = () => {
   setVisible((prev) => !prev);
   console.log(visible);
 }
+const [expense, setExpense] = useState(props.amount)
+const changeExpense = () => {
+  setExpense('100')
+  console.log(expense);
+}
   return (
    <Card className='expense-item'>
       <ExpenseDate date={props.date} />
       <div className='expense-item__description'>
         <h2>{title}</h2>
-        <div className='expense-item__price'>${visible}</div>
+        <div className='expense-item__price'>${expense}</div>
       </div>
       <button onClick={clickHandler}>change title</button>
       <button onClick={removeElement}>Delete</button>
+      <button onClick={changeExpense}>change Expense</button>
    </Card>
   );
 }
