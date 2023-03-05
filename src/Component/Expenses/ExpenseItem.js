@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
 import './ExpenseItem.css';
@@ -13,11 +13,11 @@ console.log('ExpenseItem is calling')
 //    React.createElement('h2',{}, props.title),
 //    React.createElement('div',{className:'expense-item__price'},props.amount),
 // )
-let [title, setTitle] = useState(props.title)
-let clickHandler = () => {
-  setTitle('Updated!')
-  console.log(title);
-}
+// let [title, setTitle] = useState(props.title)
+// let clickHandler = () => {
+//   setTitle('Updated!')
+//   console.log(title);
+// }
 // const [visible, setVisible] = useState(props.amount)
 // const removeElement = () => {
 //   setVisible((prev) => !prev);
@@ -32,10 +32,10 @@ let clickHandler = () => {
    <Card className='expense-item'>
       <ExpenseDate date={props.date} />
       <div className='expense-item__description'>
-        <h2>{title}</h2>
+        <h2>{props.title}</h2>
         <div className='expense-item__price'>${props.amount}</div>
       </div>
-      <button onClick={clickHandler}>Change Title</button>
+      {/* <button onClick={clickHandler}>Change Title</button> */}
       {/* <button onClick={removeElement}>Delete</button>
       <button onClick={changeExpense}>change Expense</button> */}
    </Card>
