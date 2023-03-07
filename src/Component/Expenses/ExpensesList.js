@@ -3,7 +3,7 @@ import React from "react";
 import ExpenseItem from "./ExpenseItem";
 const ExpensesList = (props) => {
   if (props.items.length === 0) {
-    return <h2 className="expenses-list__fallback">Found no elements.</h2>;
+    return <h2 className="expenses-list__fallback">No Element Found.</h2>;
   }
 
   return (
